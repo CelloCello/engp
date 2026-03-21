@@ -1,0 +1,26 @@
+{
+  "courseInfo": {
+    "id": "g3-eu-u2",
+    "title": "顏色 Colors",
+    "level": "elementary",
+    "unit": 2,
+    "version": "1.0"
+  },
+  "vocabulary": [
+    {
+      "id": "red", "word": "red", "meaning": "紅色的", "phonetic": "/red/", "difficulty": 1
+    },
+    {
+      "id": "blue", "word": "blue", "meaning": "藍色的", "phonetic": "/blu:/", "difficulty": 1
+    },
+    {
+      "id": "yellow", "word": "yellow", "meaning": "黃色的", "phonetic": "/ˈjel.oʊ/", "difficulty": 1
+    },
+    {
+      "id": "green", "word": "green", "meaning": "綠色的", "phonetic": "/ɡriːn/", "difficulty": 1
+    },
+    {
+      "id": "purple", "word": "purple", "meaning": "紫色的", "phonetic": "/ˈpɝː.pəl/", "difficulty": 2
+    }
+  ]
+}

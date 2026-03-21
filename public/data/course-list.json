@@ -1,0 +1,48 @@
+{
+  "courses": [
+    {
+      "id": "material-everybody-up",
+      "title": "三年級 EveryBody Up",
+      "description": "這是一套活潑有趣的兒童英語教材",
+      "info": "出版社: Oxford University Press",
+      "units": [
+        {
+          "id": "eu-u0",
+          "title": "Unit 0",
+          "description": "日期 Dates",
+          "file": "everybody-up/unit0.json",
+          "wordCount": 43
+        },
+        {
+          "id": "eu-u1",
+          "title": "Unit 1",
+          "description": "水果 Fruits",
+          "file": "everybody-up/unit1.json",
+          "wordCount": 5
+        },
+        {
+          "id": "eu-u2",
+          "title": "Unit 2",
+          "description": "顏色 Colors",
+          "file": "everybody-up/unit2.json",
+          "wordCount": 5
+        }
+      ]
+    },
+    {
+      "id": "material-english-chest",
+      "title": "三年級 English Chest",
+      "description": "專為小學生設計的基礎英語課程",
+      "info": "出版社: Compass Publishing",
+      "units": [
+        {
+          "id": "ec-l1",
+          "title": "Lesson 1",
+          "description": "動物 Animals (示範無對應資料)",
+          "file": "english-chest/lesson1.json",
+          "wordCount": 5
+        }
+      ]
+    }
+  ]
+}

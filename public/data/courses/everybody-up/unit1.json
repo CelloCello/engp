@@ -1,0 +1,58 @@
+{
+  "courseInfo": {
+    "id": "g3-eu-u1",
+    "title": "水果 Fruits",
+    "level": "elementary",
+    "unit": 1,
+    "version": "1.0"
+  },
+  "vocabulary": [
+    {
+      "id": "apple",
+      "word": "apple",
+      "phonetic": "/ˈæp.əl/",
+      "meaning": "蘋果",
+      "partOfSpeech": "noun",
+      "examples": [{"english": "I eat an apple every day.", "chinese": "我每天吃一個蘋果。"}],
+      "difficulty": 1
+    },
+    {
+      "id": "banana",
+      "word": "banana",
+      "phonetic": "/bəˈnæn.ə/",
+      "meaning": "香蕉",
+      "partOfSpeech": "noun",
+      "examples": [{"english": "Monkeys love bananas.", "chinese": "猴子喜歡香蕉。"}],
+      "difficulty": 1
+    },
+    {
+      "id": "orange",
+      "word": "orange",
+      "phonetic": "/ˈɔːr.ɪndʒ/",
+      "meaning": "橘子",
+      "partOfSpeech": "noun",
+      "examples": [{"english": "I drink orange juice.", "chinese": "我喝橘子汁。"}],
+      "difficulty": 1
+    },
+    {
+      "id": "grape",
+      "word": "grape",
+      "phonetic": "/ɡreɪp/",
+      "meaning": "葡萄",
+      "partOfSpeech": "noun",
+      "examples": [{"english": "These grapes are sweet.", "chinese": "這些葡萄很甜。"}],
+      "difficulty": 2
+    },
+    {
+      "id": "strawberry",
+      "word": "strawberry",
+      "phonetic": "/ˈstrɔː.ber.i/",
+      "meaning": "草莓",
+      "partOfSpeech": "noun",
+      "examples": [{"english": "Strawberry is red.", "chinese": "草莓是紅色的。"}],
+      "difficulty": 3
+    }
+  ],
+  "sentences": [],
+  "grammar": []
+}

@@ -1,0 +1,13 @@
+{
+  "courseInfo": {
+    "id": "g3-ec-l1",
+    "title": "動物 Animals",
+    "level": "elementary",
+    "unit": 1,
+    "version": "1.0"
+  },
+  "vocabulary": [
+    { "id": "dog", "word": "dog", "meaning": "狗", "phonetic": "/dɑːɡ/", "difficulty": 1 },
+    { "id": "cat", "word": "cat", "meaning": "貓", "phonetic": "/kæt/", "difficulty": 1 }
+  ]
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>兒童英文複習</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="app-header">
+        <h1>🌟 趣味英文學習 🌟</h1>
+        <div id="nav-controls" class="hidden">
+           <button id="btn-back-home" class="btn btn-secondary">返回首頁</button>
+        </div>
+      </header>
+      
+      <main class="app-content">
+        <!-- 首頁：教材選擇 -->
+        <section id="screen-home" class="screen active">
+          <h2>選擇你想挑戰的教材吧！</h2>
+          <div id="material-list-container" class="card-grid">
+            <!-- 教材卡片由 JS 動態產生 -->
+            <p>載入中...</p>
+          </div>
+        </section>
+
+        <!-- 單元選擇頁面 -->
+        <section id="screen-units" class="screen hidden">
+          <div class="units-header">
+            <h2 id="units-material-title">教材標題</h2>
+            <button id="btn-back-materials" class="btn btn-secondary btn-sm">返回教材列表</button>
+          </div>
+          <div id="unit-list-container" class="card-grid">
+            <!-- 單元卡片由 JS 動態產生 -->
+          </div>
+        </section>
+
+        <!-- 測驗頁面 -->
+        <section id="screen-quiz" class="screen hidden">
+          <div class="quiz-header">
+            <h2 id="quiz-course-title">課程標題</h2>
+            <div class="quiz-progress">
+              進度：<span id="quiz-progress-text">0/0</span>
+            </div>
+          </div>
+          
+          <div id="quiz-question-container" class="quiz-card">
+            <!-- 題目由 JS 動態產生 -->
+          </div>
+          
+          <div class="feedback-overlay hidden" id="feedback-overlay">
+            <span id="feedback-icon" class="feedback-anim">⭕</span>
+          </div>
+        </section>
+
+        <!-- 測驗結果頁面 -->
+        <section id="screen-result" class="screen hidden">
+          <h2>🎉 挑戰完成！ 🎉</h2>
+          <div class="result-stats card">
+            <p>答題時間：<span id="result-time">0</span> 秒</p>
+            <p>正確率：<span id="result-accuracy">0</span>%</p>
+            <p>答對題數：<span id="result-correct">0</span> / <span id="result-total">0</span></p>
+          </div>
+          <div class="result-actions">
+            <button id="btn-retry" class="btn btn-primary">再挑戰一次</button>
+            <button id="btn-home-from-result" class="btn btn-secondary">回單元列表</button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
