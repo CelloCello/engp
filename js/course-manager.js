@@ -1,7 +1,15 @@
 export class CourseManager {
   constructor() {
     this.courses = [];
-    this.baseUrl = import.meta.env.BASE_URL;
+    this.baseUrl = this.normalizeBaseUrl(import.meta.env.BASE_URL);
+  }
+
+  normalizeBaseUrl(baseUrl) {
+    if (!baseUrl || baseUrl === '/') {
+      return '/';
+    }
+
+    return baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
   }
 
   buildDataPath(path) {
