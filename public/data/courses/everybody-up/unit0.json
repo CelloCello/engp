@@ -1,0 +1,314 @@
+{
+  "courseInfo": {
+    "id": "g3-eu-u0",
+    "title": "日期 Dates",
+    "level": "elementary",
+    "unit": 0,
+    "version": "1.0"
+  },
+  "vocabulary": [
+    {
+      "id": "january",
+      "word": "January",
+      "phonetic": "/ˈdʒæn.ju.er.i/",
+      "meaning": "一月",
+      "difficulty": 2
+    },
+    {
+      "id": "february",
+      "word": "February",
+      "phonetic": "/ˈfeb.ru.er.i/",
+      "meaning": "二月",
+      "difficulty": 2
+    },
+    {
+      "id": "march",
+      "word": "March",
+      "phonetic": "/mɑːrtʃ/",
+      "meaning": "三月",
+      "difficulty": 1
+    },
+    {
+      "id": "april",
+      "word": "April",
+      "phonetic": "/ˈeɪ.prəl/",
+      "meaning": "四月",
+      "difficulty": 1
+    },
+    {
+      "id": "may",
+      "word": "May",
+      "phonetic": "/meɪ/",
+      "meaning": "五月",
+      "difficulty": 1
+    },
+    {
+      "id": "june",
+      "word": "June",
+      "phonetic": "/dʒuːn/",
+      "meaning": "六月",
+      "difficulty": 1
+    },
+    {
+      "id": "july",
+      "word": "July",
+      "phonetic": "/dʒuˈlaɪ/",
+      "meaning": "七月",
+      "difficulty": 1
+    },
+    {
+      "id": "august",
+      "word": "August",
+      "phonetic": "/ˈɔː.ɡəst/",
+      "meaning": "八月",
+      "difficulty": 2
+    },
+    {
+      "id": "september",
+      "word": "September",
+      "phonetic": "/sepˈtem.bər/",
+      "meaning": "九月",
+      "difficulty": 2
+    },
+    {
+      "id": "october",
+      "word": "October",
+      "phonetic": "/ɑːkˈtoʊ.bər/",
+      "meaning": "十月",
+      "difficulty": 2
+    },
+    {
+      "id": "november",
+      "word": "November",
+      "phonetic": "/noʊˈvem.bər/",
+      "meaning": "十一月",
+      "difficulty": 2
+    },
+    {
+      "id": "december",
+      "word": "December",
+      "phonetic": "/dɪˈsem.bər/",
+      "meaning": "十二月",
+      "difficulty": 2
+    },
+    {
+      "id": "first",
+      "word": "first",
+      "phonetic": "/fɝːst/",
+      "meaning": "1st",
+      "difficulty": 1
+    },
+    {
+      "id": "second",
+      "word": "second",
+      "phonetic": "/ˈsek.ənd/",
+      "meaning": "2nd",
+      "difficulty": 1
+    },
+    {
+      "id": "third",
+      "word": "third",
+      "phonetic": "/θɝːd/",
+      "meaning": "3rd",
+      "difficulty": 1
+    },
+    {
+      "id": "fourth",
+      "word": "fourth",
+      "phonetic": "/fɔːrθ/",
+      "meaning": "4th",
+      "difficulty": 1
+    },
+    {
+      "id": "fifth",
+      "word": "fifth",
+      "phonetic": "/fɪfθ/",
+      "meaning": "5th",
+      "difficulty": 1
+    },
+    {
+      "id": "sixth",
+      "word": "sixth",
+      "phonetic": "/sɪksθ/",
+      "meaning": "6th",
+      "difficulty": 1
+    },
+    {
+      "id": "seventh",
+      "word": "seventh",
+      "phonetic": "/ˈsev.ənθ/",
+      "meaning": "7th",
+      "difficulty": 1
+    },
+    {
+      "id": "eighth",
+      "word": "eighth",
+      "phonetic": "/eɪtθ/",
+      "meaning": "8th",
+      "difficulty": 1
+    },
+    {
+      "id": "ninth",
+      "word": "ninth",
+      "phonetic": "/naɪnθ/",
+      "meaning": "9th",
+      "difficulty": 1
+    },
+    {
+      "id": "tenth",
+      "word": "tenth",
+      "phonetic": "/tenθ/",
+      "meaning": "10th",
+      "difficulty": 1
+    },
+    {
+      "id": "eleventh",
+      "word": "eleventh",
+      "phonetic": "/ɪˈlev.ənθ/",
+      "meaning": "11th",
+      "difficulty": 2
+    },
+    {
+      "id": "twelfth",
+      "word": "twelfth",
+      "phonetic": "/twelfθ/",
+      "meaning": "12th",
+      "difficulty": 2
+    },
+    {
+      "id": "thirteenth",
+      "word": "thirteenth",
+      "phonetic": "/ˌθɝːˈtiːnθ/",
+      "meaning": "13th",
+      "difficulty": 2
+    },
+    {
+      "id": "fourteenth",
+      "word": "fourteenth",
+      "phonetic": "/ˌfɔːrˈtiːnθ/",
+      "meaning": "14th",
+      "difficulty": 2
+    },
+    {
+      "id": "fifteenth",
+      "word": "fifteenth",
+      "phonetic": "/ˌfɪfˈtiːnθ/",
+      "meaning": "15th",
+      "difficulty": 2
+    },
+    {
+      "id": "sixteenth",
+      "word": "sixteenth",
+      "phonetic": "/ˌsɪksˈtiːnθ/",
+      "meaning": "16th",
+      "difficulty": 2
+    },
+    {
+      "id": "seventeenth",
+      "word": "seventeenth",
+      "phonetic": "/ˌsev.ənˈtiːnθ/",
+      "meaning": "17th",
+      "difficulty": 2
+    },
+    {
+      "id": "eighteenth",
+      "word": "eighteenth",
+      "phonetic": "/ˌeɪˈtiːnθ/",
+      "meaning": "18th",
+      "difficulty": 2
+    },
+    {
+      "id": "nineteenth",
+      "word": "nineteenth",
+      "phonetic": "/ˌnaɪnˈtiːnθ/",
+      "meaning": "19th",
+      "difficulty": 2
+    },
+    {
+      "id": "twentieth",
+      "word": "twentieth",
+      "phonetic": "/ˈtwen.ti.əθ/",
+      "meaning": "20th",
+      "difficulty": 2
+    },
+    {
+      "id": "twenty-first",
+      "word": "twenty-first",
+      "phonetic": "/ˌtwen.tiˈfɝːst/",
+      "meaning": "21st",
+      "difficulty": 3
+    },
+    {
+      "id": "twenty-second",
+      "word": "twenty-second",
+      "phonetic": "/ˌtwen.tiˈsek.ənd/",
+      "meaning": "22nd",
+      "difficulty": 3
+    },
+    {
+      "id": "twenty-third",
+      "word": "twenty-third",
+      "phonetic": "/ˌtwen.tiˈθɝːd/",
+      "meaning": "23rd",
+      "difficulty": 3
+    },
+    {
+      "id": "twenty-fourth",
+      "word": "twenty-fourth",
+      "phonetic": "/ˌtwen.tiˈfɔːrθ/",
+      "meaning": "24th",
+      "difficulty": 3
+    },
+    {
+      "id": "twenty-fifth",
+      "word": "twenty-fifth",
+      "phonetic": "/ˌtwen.tiˈfɪfθ/",
+      "meaning": "25th",
+      "difficulty": 3
+    },
+    {
+      "id": "twenty-sixth",
+      "word": "twenty-sixth",
+      "phonetic": "/ˌtwen.tiˈsɪksθ/",
+      "meaning": "26th",
+      "difficulty": 3
+    },
+    {
+      "id": "twenty-seventh",
+      "word": "twenty-seventh",
+      "phonetic": "/ˌtwen.tiˈsev.ənθ/",
+      "meaning": "27th",
+      "difficulty": 3
+    },
+    {
+      "id": "twenty-eighth",
+      "word": "twenty-eighth",
+      "phonetic": "/ˌtwen.tiˈeɪtθ/",
+      "meaning": "28th",
+      "difficulty": 3
+    },
+    {
+      "id": "twenty-ninth",
+      "word": "twenty-ninth",
+      "phonetic": "/ˌtwen.tiˈnaɪnθ/",
+      "meaning": "29th",
+      "difficulty": 3
+    },
+    {
+      "id": "thirtieth",
+      "word": "thirtieth",
+      "phonetic": "/ˈθɝː.ti.əθ/",
+      "meaning": "30th",
+      "difficulty": 2
+    },
+    {
+      "id": "thirty-first",
+      "word": "thirty-first",
+      "phonetic": "/ˌθɝː.tiˈfɝːst/",
+      "meaning": "31st",
+      "difficulty": 3
+    }
+  ],
+  "sentences": [],
+  "grammar": []
+}

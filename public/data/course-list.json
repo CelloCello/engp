@@ -7,6 +7,13 @@
       "info": "出版社: Oxford University Press",
       "units": [
         {
+          "id": "eu-u0",
+          "title": "Unit 0",
+          "description": "日期 Dates",
+          "file": "everybody-up/unit0.json",
+          "wordCount": 43
+        },
+        {
           "id": "eu-u1",
           "title": "Unit 1",
           "description": "水果 Fruits",
