@@ -16,19 +16,19 @@
 
 ### 安裝依賴
 ```bash
-npm install
+pnpm install
 ```
 
 ### 開發伺服器 (開發模式)
 啟動本機伺服器以進行開發與預覽：
 ```bash
-npm run dev
+pnpm dev
 ```
 預設會運行在 `http://localhost:5173`。
 
 ### 建置與部署 (生產模式)
 ```bash
-npm run build
+pnpm build
 ```
 將會生成一個 `dist` 資料夾，裡面包含所有已壓縮、最佳化過後的靜態檔案（HTML, CSS, JS, JSON 資料與圖片），可以直接部署至 GitHub Pages 或任何靜態資源伺服器。
 

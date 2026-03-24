@@ -1,3 +1,5 @@
+import { normalizeCourseDetail } from './course-normalizer.js';
+
 export class CourseManager {
   constructor() {
     this.courses = [];
@@ -33,7 +35,7 @@ export class CourseManager {
     try {
       const resp = await fetch(this.buildDataPath(`courses/${fileName}`));
       if (!resp.ok) throw new Error('Failed to fetch course detail');
-      return await resp.json();
+      return normalizeCourseDetail(await resp.json());
     } catch (err) {
       console.error(err);
       return null;

@@ -1,0 +1,196 @@
+{
+  "courseInfo": {
+    "id": "g3-eu-u3-past-tense",
+    "title": "動詞過去式 Past Tense Verbs",
+    "level": "elementary",
+    "unit": 3,
+    "version": "1.1"
+  },
+  "stages": [
+    {
+      "id": "study-past-tense",
+      "kind": "study",
+      "title": "過去式學習",
+      "description": "先認識過去式的使用時機，再看規則動詞與不規則動詞的過去式表。",
+      "blocks": [
+        {
+          "type": "callout",
+          "title": "過去式重點",
+          "body": "過去式用來表示「已經發生過的事」。\n常見時間字有 yesterday、last night、last week、ago。"
+        },
+        {
+          "type": "table",
+          "title": "現在式與過去式",
+          "columns": ["句型", "英文", "中文"],
+          "rows": [
+            ["現在式", "Tom cleans the room every day.", "Tom 每天打掃房間。"],
+            ["過去式", "Tom cleaned the room yesterday.", "Tom 昨天打掃了房間。"],
+            ["現在式", "Amy writes a letter.", "Amy 寫信。"],
+            ["過去式", "Amy wrote a letter last night.", "Amy 昨晚寫了一封信。"]
+          ]
+        },
+        {
+          "type": "text",
+          "title": "規則動詞變化規則",
+          "body": "大部分規則動詞直接加 -ed，例如 play -> played。\n字尾是 e 時只加 -d，例如 like -> liked。\n子音加 y 結尾時，把 y 改成 i 再加 -ed，例如 study -> studied。\n短母音 + 子音結尾時，常把最後一個子音重複再加 -ed，例如 stop -> stopped。"
+        },
+        {
+          "type": "example-list",
+          "title": "過去式例句",
+          "items": [
+            {
+              "english": "The boy played soccer yesterday.",
+              "chinese": "那個男孩昨天踢足球。"
+            },
+            {
+              "english": "Amy went to the library last Sunday.",
+              "chinese": "Amy 上週日去了圖書館。"
+            },
+            {
+              "english": "We watched the movie last night.",
+              "chinese": "我們昨晚看了那部電影。"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "不規則動詞的過去式",
+          "columns": ["原形", "中文", "過去式"],
+          "rows": [
+            ["be", "是、在", "was / were"],
+            ["have", "有", "had"],
+            ["do", "做", "did"],
+            ["go", "去", "went"],
+            ["come", "來", "came"],
+            ["see", "看見", "saw"],
+            ["say", "說", "said"],
+            ["get", "得到", "got"],
+            ["make", "做、製作", "made"],
+            ["take", "拿、帶", "took"],
+            ["eat", "吃", "ate"],
+            ["drink", "喝", "drank"],
+            ["give", "給", "gave"],
+            ["know", "知道", "knew"],
+            ["think", "想", "thought"],
+            ["run", "跑", "ran"],
+            ["sit", "坐", "sat"],
+            ["stand", "站", "stood"],
+            ["read", "閱讀", "read"],
+            ["write", "寫", "wrote"],
+            ["speak", "說話", "spoke"],
+            ["tell", "告訴", "told"],
+            ["find", "找到", "found"],
+            ["buy", "買", "bought"],
+            ["bring", "帶來", "brought"],
+            ["teach", "教", "taught"],
+            ["sleep", "睡覺", "slept"],
+            ["keep", "保持、保存", "kept"],
+            ["feel", "感覺", "felt"],
+            ["leave", "離開", "left"],
+            ["meet", "遇見", "met"]
+          ]
+        },
+        {
+          "type": "table",
+          "title": "規則動詞的過去式",
+          "columns": ["原形", "中文", "過去式"],
+          "rows": [
+            ["play", "玩", "played"],
+            ["look", "看", "looked"],
+            ["walk", "走路", "walked"],
+            ["help", "幫助", "helped"],
+            ["talk", "講話", "talked"],
+            ["jump", "跳", "jumped"],
+            ["wash", "洗", "washed"],
+            ["clean", "清理", "cleaned"],
+            ["open", "打開", "opened"],
+            ["close", "關上", "closed"],
+            ["call", "打電話、叫", "called"],
+            ["want", "想要", "wanted"],
+            ["need", "需要", "needed"],
+            ["like", "喜歡", "liked"],
+            ["love", "愛、喜歡", "loved"],
+            ["live", "住", "lived"],
+            ["move", "移動", "moved"],
+            ["watch", "觀看", "watched"],
+            ["visit", "拜訪", "visited"],
+            ["rain", "下雨", "rained"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quiz-past-tense",
+      "kind": "quiz",
+      "engine": "grammar-choice",
+      "title": "過去式練習",
+      "description": "選出正確的過去式動詞。",
+      "questions": [
+        {
+          "id": "past-q1",
+          "prompt": "選出正確答案。",
+          "stem": "Yesterday Tom ___ to school.",
+          "choices": ["go", "goes", "went", "gone"],
+          "correctIndex": 2,
+          "explanation": "yesterday 表示過去，所以要用 go 的過去式 went。"
+        },
+        {
+          "id": "past-q2",
+          "prompt": "選出正確答案。",
+          "stem": "Amy ___ a letter last night.",
+          "choices": ["writes", "wrote", "written", "write"],
+          "correctIndex": 1,
+          "explanation": "last night 表示過去，write 的過去式是 wrote。"
+        },
+        {
+          "id": "past-q3",
+          "prompt": "選出正確答案。",
+          "stem": "We ___ soccer after school yesterday.",
+          "choices": ["play", "played", "plays", "playing"],
+          "correctIndex": 1,
+          "explanation": "規則動詞 play 的過去式直接加 -ed，變成 played。"
+        },
+        {
+          "id": "past-q4",
+          "prompt": "哪一個選項正確？",
+          "stem": "The boy ___ the cake this morning.",
+          "choices": ["eat", "eated", "ate", "eaten"],
+          "correctIndex": 2,
+          "explanation": "eat 是不規則動詞，它的過去式是 ate。"
+        },
+        {
+          "id": "past-q5",
+          "prompt": "選出正確答案。",
+          "stem": "My mom ___ me a story yesterday.",
+          "choices": ["tell", "told", "telled", "telling"],
+          "correctIndex": 1,
+          "explanation": "tell 的過去式是不規則變化 told。"
+        },
+        {
+          "id": "past-q6",
+          "prompt": "選出正確答案。",
+          "stem": "It ___ all day last Sunday.",
+          "choices": ["rain", "rains", "rained", "raining"],
+          "correctIndex": 2,
+          "explanation": "rain 是規則動詞，過去式是 rained。"
+        },
+        {
+          "id": "past-q7",
+          "prompt": "選出正確答案。",
+          "stem": "The teacher ___ us English yesterday.",
+          "choices": ["teach", "teached", "taught", "teaching"],
+          "correctIndex": 2,
+          "explanation": "teach 的過去式是不規則變化 taught。"
+        },
+        {
+          "id": "past-q8",
+          "prompt": "選出正確答案。",
+          "stem": "We ___ TV last night.",
+          "choices": ["watch", "watched", "watches", "watching"],
+          "correctIndex": 1,
+          "explanation": "watch 是規則動詞，過去式是 watched。"
+        }
+      ]
+    }
+  ]
+}

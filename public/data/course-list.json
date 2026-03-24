@@ -26,6 +26,12 @@
           "description": "顏色 Colors",
           "file": "everybody-up/unit2.json",
           "wordCount": 5
+        },
+        {
+          "id": "eu-u3",
+          "title": "Unit 3",
+          "description": "動詞過去式 Past Tense Verbs",
+          "file": "everybody-up/unit3-past-tense.json"
         }
       ]
     },
