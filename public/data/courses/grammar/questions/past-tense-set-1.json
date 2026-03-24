@@ -1,0 +1,246 @@
+{
+  "id": "past-tense-set-1",
+  "title": "Past Tense Set 1",
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "選出正確答案。",
+      "stem": "Tom ___ his room every day.",
+      "choices": ["clean", "cleans", "cleaned", "cleaning"],
+      "correctIndex": 1,
+      "explanation": "every day 表示平常習慣，所以要用現在式，Tom 是第三人稱單數，因此用 cleans。"
+    },
+    {
+      "id": "q2",
+      "prompt": "選出正確答案。",
+      "stem": "We ___ baseball after school.",
+      "choices": ["play", "plays", "played", "playing"],
+      "correctIndex": 0,
+      "explanation": "after school 表示平常的活動，主詞是 we，所以用現在式原形 play。"
+    },
+    {
+      "id": "q3",
+      "prompt": "選出正確答案。",
+      "stem": "I ___ milk every morning.",
+      "choices": ["drink", "drinks", "drank", "drinking"],
+      "correctIndex": 0,
+      "explanation": "every morning 表示經常發生的事，主詞是 I，所以用現在式 drink。"
+    },
+    {
+      "id": "q4",
+      "prompt": "選出正確答案。",
+      "stem": "My sister ___ her bike on Sundays.",
+      "choices": ["ride", "rides", "rode", "riding"],
+      "correctIndex": 1,
+      "explanation": "on Sundays 表示固定習慣，My sister 是第三人稱單數，所以要用 rides。"
+    },
+    {
+      "id": "q5",
+      "prompt": "選出正確答案。",
+      "stem": "They ___ English songs at night.",
+      "choices": ["sing", "sings", "sang", "singing"],
+      "correctIndex": 0,
+      "explanation": "at night 這裡表示平常晚上會做的事，主詞是 they，所以用 sing。"
+    },
+    {
+      "id": "q6",
+      "prompt": "選出正確答案。",
+      "stem": "Ben ___ his homework after dinner.",
+      "choices": ["do", "does", "did", "doing"],
+      "correctIndex": 1,
+      "explanation": "after dinner 表示每天晚餐後的習慣，Ben 是第三人稱單數，所以要用 does。"
+    },
+    {
+      "id": "q7",
+      "prompt": "選出正確答案。",
+      "stem": "The dogs ___ in the park every afternoon.",
+      "choices": ["run", "runs", "ran", "running"],
+      "correctIndex": 0,
+      "explanation": "every afternoon 表示經常發生的事，主詞是複數 dogs，所以用 run。"
+    },
+    {
+      "id": "q8",
+      "prompt": "選出正確答案。",
+      "stem": "Lisa ___ a picture every weekend.",
+      "choices": ["draw", "draws", "drew", "drawing"],
+      "correctIndex": 1,
+      "explanation": "every weekend 表示固定習慣，Lisa 是第三人稱單數，所以用 draws。"
+    },
+    {
+      "id": "q9",
+      "prompt": "選出正確答案。",
+      "stem": "We ___ to the library on Saturdays.",
+      "choices": ["go", "goes", "went", "going"],
+      "correctIndex": 0,
+      "explanation": "on Saturdays 表示平常每週六的習慣，主詞是 we，所以用 go。"
+    },
+    {
+      "id": "q10",
+      "prompt": "選出正確答案。",
+      "stem": "Dad ___ breakfast for us every morning.",
+      "choices": ["make", "makes", "made", "making"],
+      "correctIndex": 1,
+      "explanation": "every morning 表示習慣，Dad 是第三人稱單數，所以要用 makes。"
+    },
+    {
+      "id": "q11",
+      "prompt": "選出正確答案。",
+      "stem": "My friends ___ under the big tree at lunch time.",
+      "choices": ["sit", "sits", "sat", "sitting"],
+      "correctIndex": 0,
+      "explanation": "at lunch time 表示平常午餐時間的習慣，主詞是複數 friends，所以用 sit。"
+    },
+    {
+      "id": "q12",
+      "prompt": "選出正確答案。",
+      "stem": "The teacher ___ stories in class every week.",
+      "choices": ["tell", "tells", "told", "telling"],
+      "correctIndex": 1,
+      "explanation": "every week 表示規律發生的事，The teacher 是第三人稱單數，所以用 tells。"
+    },
+    {
+      "id": "q13",
+      "prompt": "選出正確答案。",
+      "stem": "Yesterday Tom ___ his room.",
+      "choices": ["clean", "cleans", "cleaned", "cleaning"],
+      "correctIndex": 2,
+      "explanation": "Yesterday 表示過去，所以要用 clean 的過去式 cleaned。"
+    },
+    {
+      "id": "q14",
+      "prompt": "選出正確答案。",
+      "stem": "We ___ baseball after school yesterday.",
+      "choices": ["play", "plays", "played", "playing"],
+      "correctIndex": 2,
+      "explanation": "yesterday 表示過去，因此要用 played。"
+    },
+    {
+      "id": "q15",
+      "prompt": "選出正確答案。",
+      "stem": "I ___ milk this morning.",
+      "choices": ["drink", "drinks", "drank", "drinking"],
+      "correctIndex": 2,
+      "explanation": "this morning 在這裡表示今天早上已經發生的事，所以用 drank。"
+    },
+    {
+      "id": "q16",
+      "prompt": "選出正確答案。",
+      "stem": "My sister ___ her bike last Sunday.",
+      "choices": ["ride", "rides", "rode", "riding"],
+      "correctIndex": 2,
+      "explanation": "last Sunday 表示過去，因此用 ride 的過去式 rode。"
+    },
+    {
+      "id": "q17",
+      "prompt": "選出正確答案。",
+      "stem": "They ___ English songs last night.",
+      "choices": ["sing", "sings", "sang", "singing"],
+      "correctIndex": 2,
+      "explanation": "last night 表示過去，所以要用 sang。"
+    },
+    {
+      "id": "q18",
+      "prompt": "選出正確答案。",
+      "stem": "Ben ___ his homework two hours ago.",
+      "choices": ["do", "does", "did", "doing"],
+      "correctIndex": 2,
+      "explanation": "two hours ago 表示過去，因此要用 did。"
+    },
+    {
+      "id": "q19",
+      "prompt": "選出正確答案。",
+      "stem": "The dogs ___ in the park yesterday afternoon.",
+      "choices": ["run", "runs", "ran", "running"],
+      "correctIndex": 2,
+      "explanation": "yesterday afternoon 表示過去，所以用 ran。"
+    },
+    {
+      "id": "q20",
+      "prompt": "選出正確答案。",
+      "stem": "Lisa ___ a picture last weekend.",
+      "choices": ["draw", "draws", "drew", "drawing"],
+      "correctIndex": 2,
+      "explanation": "last weekend 表示過去，因此用 drew。"
+    },
+    {
+      "id": "q21",
+      "prompt": "選出正確答案。",
+      "stem": "We ___ to the library yesterday.",
+      "choices": ["go", "goes", "went", "going"],
+      "correctIndex": 2,
+      "explanation": "yesterday 表示過去，所以要用 went。"
+    },
+    {
+      "id": "q22",
+      "prompt": "選出正確答案。",
+      "stem": "Dad ___ breakfast for us this morning.",
+      "choices": ["make", "makes", "made", "making"],
+      "correctIndex": 2,
+      "explanation": "this morning 表示已經發生的事，所以要用 made。"
+    },
+    {
+      "id": "q23",
+      "prompt": "選出正確答案。",
+      "stem": "My friends ___ under the big tree yesterday.",
+      "choices": ["sit", "sits", "sat", "sitting"],
+      "correctIndex": 2,
+      "explanation": "yesterday 表示過去，所以用 sat。"
+    },
+    {
+      "id": "q24",
+      "prompt": "選出正確答案。",
+      "stem": "The teacher ___ a story in class yesterday.",
+      "choices": ["tell", "tells", "told", "telling"],
+      "correctIndex": 2,
+      "explanation": "yesterday 表示過去，因此要用 told。"
+    },
+    {
+      "id": "q25",
+      "prompt": "選出正確答案。",
+      "stem": "Mom ___ the window last night.",
+      "choices": ["open", "opens", "opened", "opening"],
+      "correctIndex": 2,
+      "explanation": "last night 表示過去，所以要用 opened。"
+    },
+    {
+      "id": "q26",
+      "prompt": "選出正確答案。",
+      "stem": "The boy ___ the heavy box yesterday.",
+      "choices": ["carry", "carries", "carried", "carrying"],
+      "correctIndex": 2,
+      "explanation": "yesterday 表示過去，carry 的過去式是 carried。"
+    },
+    {
+      "id": "q27",
+      "prompt": "選出正確答案。",
+      "stem": "Amy ___ her grandma last week.",
+      "choices": ["visit", "visits", "visited", "visiting"],
+      "correctIndex": 2,
+      "explanation": "last week 表示過去，所以要用 visited。"
+    },
+    {
+      "id": "q28",
+      "prompt": "選出正確答案。",
+      "stem": "The baby ___ for water a minute ago.",
+      "choices": ["cry", "cries", "cried", "crying"],
+      "correctIndex": 2,
+      "explanation": "a minute ago 表示過去，因此要用 cried。"
+    },
+    {
+      "id": "q29",
+      "prompt": "選出正確答案。",
+      "stem": "We ___ TV last night.",
+      "choices": ["watch", "watches", "watched", "watching"],
+      "correctIndex": 2,
+      "explanation": "last night 表示過去，所以用 watched。"
+    },
+    {
+      "id": "q30",
+      "prompt": "選出正確答案。",
+      "stem": "Grandpa ___ me a funny joke yesterday.",
+      "choices": ["tell", "tells", "told", "telling"],
+      "correctIndex": 2,
+      "explanation": "yesterday 表示過去，因此要用 told。"
+    }
+  ]
+}

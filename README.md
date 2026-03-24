@@ -81,10 +81,13 @@ engp/
       "id": "quiz-past-tense",
       "kind": "quiz",
       "engine": "grammar-choice",
-      "title": "過去式練習",
+      "title": "現在式與過去式練習",
       "questionFiles": [
-        "questions/past-tense-core.json",
-        "questions/past-tense-irregular.json"
+        "questions/past-tense-set-1.json",
+        "questions/past-tense-set-2.json",
+        "questions/past-tense-set-3.json",
+        "questions/past-tense-set-4.json",
+        "questions/past-tense-set-5.json"
       ]
     }
   ],
@@ -92,20 +95,20 @@ engp/
 }
 ```
 
-`grammar-choice` 的題目可以直接寫在 stage 的 `questions`，也可以拆成多個 `questionFiles`。當設定多個 `questionFiles` 時，系統會在每次開始練習時先隨機選一個題庫檔，再從該檔案內打亂出題。
+`grammar-choice` 的題目可以直接寫在 stage 的 `questions`，也可以拆成多個 `questionFiles`。當設定多個 `questionFiles` 時，系統會在每次開始練習時先隨機選一個題庫檔，再從該檔案內打亂出題。像過去式題庫可以拆成 5 份混合題庫，每份同時包含現在式與過去式題目。
 
 ```json
 {
-  "id": "past-tense-core",
-  "title": "Past Tense Core",
+  "id": "past-tense-set-1",
+  "title": "Past Tense Set 1",
   "questions": [
     {
       "id": "q1",
       "prompt": "選出正確答案。",
-      "stem": "Yesterday Tom ___ to school.",
-      "choices": ["go", "goes", "went", "gone"],
-      "correctIndex": 2,
-      "explanation": "yesterday 表示過去，所以要用 went。"
+      "stem": "Tom ___ his room every day.",
+      "choices": ["clean", "cleans", "cleaned", "cleaning"],
+      "correctIndex": 1,
+      "explanation": "every day 表示平常習慣，所以要用 cleans。"
     }
   ]
 }

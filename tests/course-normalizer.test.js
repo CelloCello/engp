@@ -68,9 +68,9 @@ describe('normalizeCourseDetail', () => {
           title: '過去式練習',
           questionSets: [
             {
-              id: 'past-tense-core',
+              id: 'past-tense-set-1',
               title: 'Core',
-              questions: [{ id: 'q1', progressId: 'past-tense-core:q1' }],
+              questions: [{ id: 'q1', progressId: 'past-tense-set-1:q1' }],
             },
           ],
         },
@@ -80,9 +80,9 @@ describe('normalizeCourseDetail', () => {
     expect(course.stages).toHaveLength(1);
     expect(course.stages[0].questionSets).toEqual([
       {
-        id: 'past-tense-core',
+        id: 'past-tense-set-1',
         title: 'Core',
-        questions: [{ id: 'q1', progressId: 'past-tense-core:q1' }],
+        questions: [{ id: 'q1', progressId: 'past-tense-set-1:q1' }],
       },
     ]);
   });

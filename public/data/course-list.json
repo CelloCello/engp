@@ -1,6 +1,20 @@
 {
   "courses": [
     {
+      "id": "material-grammar",
+      "title": "文法 Grammar",
+      "description": "集中整理文法學習與練習題庫",
+      "info": "依主題拆分課程與題庫",
+      "units": [
+        {
+          "id": "grammar-past-tense",
+          "title": "Past Tense",
+          "description": "動詞過去式 Past Tense Verbs",
+          "file": "grammar/past-tense.json"
+        }
+      ]
+    },
+    {
       "id": "material-everybody-up",
       "title": "三年級 EveryBody Up",
       "description": "這是一套活潑有趣的兒童英語教材",
@@ -26,20 +40,6 @@
           "description": "顏色 Colors",
           "file": "everybody-up/unit2.json",
           "wordCount": 5
-        }
-      ]
-    },
-    {
-      "id": "material-grammar",
-      "title": "Grammar",
-      "description": "集中整理文法學習與練習題庫",
-      "info": "依主題拆分課程與題庫",
-      "units": [
-        {
-          "id": "grammar-past-tense",
-          "title": "Past Tense",
-          "description": "動詞過去式 Past Tense Verbs",
-          "file": "grammar/past-tense.json"
         }
       ]
     },

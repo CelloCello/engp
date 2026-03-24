@@ -1,3 +1,5 @@
+const MAX_GRAMMAR_QUESTIONS = 10;
+
 export class QuizEngine {
   constructor(courseData, stage, progressTracker) {
     this.courseData = courseData;
@@ -26,11 +28,15 @@ export class QuizEngine {
 
       if (questionSets.length > 0) {
         const selectedSet = questionSets[Math.floor(Math.random() * questionSets.length)];
-        this.questions = [...(selectedSet.questions || [])].sort(() => Math.random() - 0.5);
+        this.questions = [...(selectedSet.questions || [])]
+          .sort(() => Math.random() - 0.5)
+          .slice(0, MAX_GRAMMAR_QUESTIONS);
         return;
       }
 
-      this.questions = [...(this.stage.questions || [])].sort(() => Math.random() - 0.5);
+      this.questions = [...(this.stage.questions || [])]
+        .sort(() => Math.random() - 0.5)
+        .slice(0, MAX_GRAMMAR_QUESTIONS);
       return;
     }
 

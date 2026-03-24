@@ -25,7 +25,7 @@ describe('CourseManager', () => {
               kind: 'quiz',
               engine: 'grammar-choice',
               title: '過去式練習',
-              questionFiles: ['questions/past-tense-core.json'],
+              questionFiles: ['questions/past-tense-set-1.json'],
             },
           ],
         }),
@@ -33,8 +33,8 @@ describe('CourseManager', () => {
       .mockResolvedValueOnce({
         ok: true,
         json: async () => ({
-          id: 'past-tense-core',
-          title: 'Past Tense Core',
+          id: 'past-tense-set-1',
+          title: 'Past Tense Set 1',
           questions: [
             {
               id: 'q1',
@@ -50,11 +50,11 @@ describe('CourseManager', () => {
     const course = await manager.fetchCourseDetail('grammar/past-tense.json');
 
     expect(global.fetch).toHaveBeenNthCalledWith(1, '/data/courses/grammar/past-tense.json');
-    expect(global.fetch).toHaveBeenNthCalledWith(2, '/data/courses/grammar/questions/past-tense-core.json');
+    expect(global.fetch).toHaveBeenNthCalledWith(2, '/data/courses/grammar/questions/past-tense-set-1.json');
     expect(course.stages[0].questionSets).toEqual([
       {
-        id: 'past-tense-core',
-        title: 'Past Tense Core',
+        id: 'past-tense-set-1',
+        title: 'Past Tense Set 1',
         questions: [
           {
             id: 'q1',
@@ -62,8 +62,8 @@ describe('CourseManager', () => {
             stem: 'We ___ soccer yesterday.',
             choices: ['play', 'played'],
             correctIndex: 1,
-            sourceSetId: 'past-tense-core',
-            progressId: 'past-tense-core:q1',
+            sourceSetId: 'past-tense-set-1',
+            progressId: 'past-tense-set-1:q1',
           },
         ],
       },

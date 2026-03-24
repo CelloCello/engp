@@ -121,16 +121,20 @@ describe('QuizEngine', () => {
         engine: 'grammar-choice',
         questionSets: [
           {
-            id: 'past-tense-core',
+            id: 'past-tense-set-1',
             questions: [
-              { id: 'q1', stem: 'core', choices: ['a', 'b'], correctIndex: 0, progressId: 'past-tense-core:q1' },
+              { id: 'q1', stem: 'core', choices: ['a', 'b'], correctIndex: 0, progressId: 'past-tense-set-1:q1' },
             ],
           },
           {
-            id: 'past-tense-irregular',
-            questions: [
-              { id: 'q1', stem: 'irregular-1', choices: ['a', 'b'], correctIndex: 1, progressId: 'past-tense-irregular:q1' },
-            ],
+            id: 'past-tense-set-2',
+            questions: Array.from({ length: 12 }, (_, index) => ({
+              id: `q${index + 1}`,
+              stem: `mixed-${index + 1}`,
+              choices: ['a', 'b'],
+              correctIndex: 1,
+              progressId: `past-tense-set-2:q${index + 1}`,
+            })),
           },
         ],
       },
@@ -139,14 +143,14 @@ describe('QuizEngine', () => {
 
     engine.buildQuestions();
 
-    expect(engine.questions).toHaveLength(1);
-    expect(engine.questions.every((question) => question.progressId.startsWith('past-tense-irregular:'))).toBe(true);
+    expect(engine.questions).toHaveLength(10);
+    expect(engine.questions.every((question) => question.progressId.startsWith('past-tense-set-2:'))).toBe(true);
 
     engine.submitAnswer(1);
 
     expect(progressTracker.recordGrammarChoiceResult).toHaveBeenCalledWith(
       'grammar-past-tense',
-      'past-tense-irregular:q1',
+      engine.questions[0].progressId,
       true,
     );
 

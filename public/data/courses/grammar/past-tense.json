@@ -123,11 +123,14 @@
       "id": "quiz-past-tense",
       "kind": "quiz",
       "engine": "grammar-choice",
-      "title": "過去式練習",
-      "description": "每次會先隨機選一份題庫，再從該題庫亂數出題。",
+      "title": "現在式與過去式練習",
+      "description": "每次會先隨機選一份混合題庫，再從該題庫亂數出題。",
       "questionFiles": [
-        "questions/past-tense-core.json",
-        "questions/past-tense-irregular.json"
+        "questions/past-tense-set-1.json",
+        "questions/past-tense-set-2.json",
+        "questions/past-tense-set-3.json",
+        "questions/past-tense-set-4.json",
+        "questions/past-tense-set-5.json"
       ]
     }
   ]
