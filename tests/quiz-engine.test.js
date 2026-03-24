@@ -101,4 +101,55 @@ describe('QuizEngine', () => {
     expect(progressTracker.recordGrammarChoiceResult).toHaveBeenCalledWith('past-tense-unit', 'q1', true);
     expect(engine.correctCount).toBe(1);
   });
+
+  it('selects one external question set per run and records progressId', () => {
+    const progressTracker = {
+      getWordLevel: vi.fn(() => 1),
+      recordWordResult: vi.fn(),
+      recordGrammarChoiceResult: vi.fn(),
+    };
+    const randomSpy = vi.spyOn(Math, 'random')
+      .mockReturnValueOnce(0.9);
+    const engine = new QuizEngine(
+      {
+        courseInfo: { id: 'grammar-past-tense' },
+        vocabulary: [],
+      },
+      {
+        id: 'quiz-past-tense',
+        kind: 'quiz',
+        engine: 'grammar-choice',
+        questionSets: [
+          {
+            id: 'past-tense-core',
+            questions: [
+              { id: 'q1', stem: 'core', choices: ['a', 'b'], correctIndex: 0, progressId: 'past-tense-core:q1' },
+            ],
+          },
+          {
+            id: 'past-tense-irregular',
+            questions: [
+              { id: 'q1', stem: 'irregular-1', choices: ['a', 'b'], correctIndex: 1, progressId: 'past-tense-irregular:q1' },
+            ],
+          },
+        ],
+      },
+      progressTracker,
+    );
+
+    engine.buildQuestions();
+
+    expect(engine.questions).toHaveLength(1);
+    expect(engine.questions.every((question) => question.progressId.startsWith('past-tense-irregular:'))).toBe(true);
+
+    engine.submitAnswer(1);
+
+    expect(progressTracker.recordGrammarChoiceResult).toHaveBeenCalledWith(
+      'grammar-past-tense',
+      'past-tense-irregular:q1',
+      true,
+    );
+
+    randomSpy.mockRestore();
+  });
 });

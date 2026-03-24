@@ -1,0 +1,38 @@
+{
+  "id": "past-tense-core",
+  "title": "Past Tense Core",
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "選出正確答案。",
+      "stem": "We ___ soccer after school yesterday.",
+      "choices": ["play", "played", "plays", "playing"],
+      "correctIndex": 1,
+      "explanation": "規則動詞 play 的過去式直接加 -ed，變成 played。"
+    },
+    {
+      "id": "q2",
+      "prompt": "選出正確答案。",
+      "stem": "It ___ all day last Sunday.",
+      "choices": ["rain", "rains", "rained", "raining"],
+      "correctIndex": 2,
+      "explanation": "rain 是規則動詞，過去式是 rained。"
+    },
+    {
+      "id": "q3",
+      "prompt": "選出正確答案。",
+      "stem": "We ___ TV last night.",
+      "choices": ["watch", "watched", "watches", "watching"],
+      "correctIndex": 1,
+      "explanation": "watch 是規則動詞，過去式是 watched。"
+    },
+    {
+      "id": "q4",
+      "prompt": "選出正確答案。",
+      "stem": "Dad ___ the door before bedtime.",
+      "choices": ["close", "closed", "closes", "closing"],
+      "correctIndex": 1,
+      "explanation": "close 是規則動詞，過去式是 closed。"
+    }
+  ]
+}

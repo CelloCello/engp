@@ -47,7 +47,7 @@ engp/
 ├── public/
 │   └── data/
 │       ├── course-list.json     # 課程全域索引 (包含 教材 > 單元 兩層架構)
-│       └── courses/             # 依據架構存放單元 JSON 檔 (例如: everybody-up/unit1.json)
+│       └── courses/             # 依據架構存放單元 JSON 與題庫檔 (例如: grammar/questions/*.json)
 └── package.json
 ```
 
@@ -59,24 +59,55 @@ engp/
 ```json
 {
   "courseInfo": {
-    "id": "elementary-unit1",
-    "title": "水果 Fruits",
+    "id": "grammar-past-tense",
+    "title": "Past Tense",
     "level": "elementary",
     "unit": 1,
     "version": "1.0"
   },
-  "vocabulary": [
+  "stages": [
     {
-      "id": "apple",
-      "word": "apple",
-      "phonetic": "/ˈæp.əl/",
-      "meaning": "蘋果",
-      "difficulty": 1
+      "id": "study-past-tense",
+      "kind": "study",
+      "title": "過去式學習",
+      "blocks": [
+        {
+          "type": "text",
+          "body": "go -> went"
+        }
+      ]
+    },
+    {
+      "id": "quiz-past-tense",
+      "kind": "quiz",
+      "engine": "grammar-choice",
+      "title": "過去式練習",
+      "questionFiles": [
+        "questions/past-tense-core.json",
+        "questions/past-tense-irregular.json"
+      ]
     }
-    // ...更多單字
   ],
-  "sentences": [], // 擴充中
-  "grammar": []    // 擴充中
+  "vocabulary": []
+}
+```
+
+`grammar-choice` 的題目可以直接寫在 stage 的 `questions`，也可以拆成多個 `questionFiles`。當設定多個 `questionFiles` 時，系統會在每次開始練習時先隨機選一個題庫檔，再從該檔案內打亂出題。
+
+```json
+{
+  "id": "past-tense-core",
+  "title": "Past Tense Core",
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "選出正確答案。",
+      "stem": "Yesterday Tom ___ to school.",
+      "choices": ["go", "goes", "went", "gone"],
+      "correctIndex": 2,
+      "explanation": "yesterday 表示過去，所以要用 went。"
+    }
+  ]
 }
 ```
 

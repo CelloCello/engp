@@ -22,6 +22,14 @@ export class QuizEngine {
 
   buildQuestions() {
     if (this.engine === 'grammar-choice') {
+      const questionSets = Array.isArray(this.stage.questionSets) ? this.stage.questionSets : [];
+
+      if (questionSets.length > 0) {
+        const selectedSet = questionSets[Math.floor(Math.random() * questionSets.length)];
+        this.questions = [...(selectedSet.questions || [])].sort(() => Math.random() - 0.5);
+        return;
+      }
+
       this.questions = [...(this.stage.questions || [])].sort(() => Math.random() - 0.5);
       return;
     }
@@ -90,8 +98,9 @@ export class QuizEngine {
     if (this.engine === 'grammar-choice') {
       const selectedIndex = Number(inputWord);
       const isCorrect = selectedIndex === currentQ.correctIndex;
+      const progressQuestionId = currentQ.progressId || currentQ.id;
 
-      this.progressTracker.recordGrammarChoiceResult(this.courseData.courseInfo.id, currentQ.id, isCorrect);
+      this.progressTracker.recordGrammarChoiceResult(this.courseData.courseInfo.id, progressQuestionId, isCorrect);
 
       if (isCorrect) {
         this.correctCount++;

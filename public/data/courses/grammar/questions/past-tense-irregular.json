@@ -1,0 +1,46 @@
+{
+  "id": "past-tense-irregular",
+  "title": "Past Tense Irregular",
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "選出正確答案。",
+      "stem": "Yesterday Tom ___ to school.",
+      "choices": ["go", "goes", "went", "gone"],
+      "correctIndex": 2,
+      "explanation": "yesterday 表示過去，所以要用 go 的過去式 went。"
+    },
+    {
+      "id": "q2",
+      "prompt": "選出正確答案。",
+      "stem": "Amy ___ a letter last night.",
+      "choices": ["writes", "wrote", "written", "write"],
+      "correctIndex": 1,
+      "explanation": "last night 表示過去，write 的過去式是 wrote。"
+    },
+    {
+      "id": "q3",
+      "prompt": "哪一個選項正確？",
+      "stem": "The boy ___ the cake this morning.",
+      "choices": ["eat", "eated", "ate", "eaten"],
+      "correctIndex": 2,
+      "explanation": "eat 是不規則動詞，它的過去式是 ate。"
+    },
+    {
+      "id": "q4",
+      "prompt": "選出正確答案。",
+      "stem": "My mom ___ me a story yesterday.",
+      "choices": ["tell", "told", "telled", "telling"],
+      "correctIndex": 1,
+      "explanation": "tell 的過去式是不規則變化 told。"
+    },
+    {
+      "id": "q5",
+      "prompt": "選出正確答案。",
+      "stem": "The teacher ___ us English yesterday.",
+      "choices": ["teach", "teached", "taught", "teaching"],
+      "correctIndex": 2,
+      "explanation": "teach 的過去式是不規則變化 taught。"
+    }
+  ]
+}

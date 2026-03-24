@@ -1,10 +1,10 @@
 {
   "courseInfo": {
-    "id": "g3-eu-u3-past-tense",
-    "title": "動詞過去式 Past Tense Verbs",
+    "id": "grammar-past-tense",
+    "title": "Past Tense",
     "level": "elementary",
-    "unit": 3,
-    "version": "1.1"
+    "unit": 1,
+    "version": "1.0"
   },
   "stages": [
     {
@@ -124,72 +124,10 @@
       "kind": "quiz",
       "engine": "grammar-choice",
       "title": "過去式練習",
-      "description": "選出正確的過去式動詞。",
-      "questions": [
-        {
-          "id": "past-q1",
-          "prompt": "選出正確答案。",
-          "stem": "Yesterday Tom ___ to school.",
-          "choices": ["go", "goes", "went", "gone"],
-          "correctIndex": 2,
-          "explanation": "yesterday 表示過去，所以要用 go 的過去式 went。"
-        },
-        {
-          "id": "past-q2",
-          "prompt": "選出正確答案。",
-          "stem": "Amy ___ a letter last night.",
-          "choices": ["writes", "wrote", "written", "write"],
-          "correctIndex": 1,
-          "explanation": "last night 表示過去，write 的過去式是 wrote。"
-        },
-        {
-          "id": "past-q3",
-          "prompt": "選出正確答案。",
-          "stem": "We ___ soccer after school yesterday.",
-          "choices": ["play", "played", "plays", "playing"],
-          "correctIndex": 1,
-          "explanation": "規則動詞 play 的過去式直接加 -ed，變成 played。"
-        },
-        {
-          "id": "past-q4",
-          "prompt": "哪一個選項正確？",
-          "stem": "The boy ___ the cake this morning.",
-          "choices": ["eat", "eated", "ate", "eaten"],
-          "correctIndex": 2,
-          "explanation": "eat 是不規則動詞，它的過去式是 ate。"
-        },
-        {
-          "id": "past-q5",
-          "prompt": "選出正確答案。",
-          "stem": "My mom ___ me a story yesterday.",
-          "choices": ["tell", "told", "telled", "telling"],
-          "correctIndex": 1,
-          "explanation": "tell 的過去式是不規則變化 told。"
-        },
-        {
-          "id": "past-q6",
-          "prompt": "選出正確答案。",
-          "stem": "It ___ all day last Sunday.",
-          "choices": ["rain", "rains", "rained", "raining"],
-          "correctIndex": 2,
-          "explanation": "rain 是規則動詞，過去式是 rained。"
-        },
-        {
-          "id": "past-q7",
-          "prompt": "選出正確答案。",
-          "stem": "The teacher ___ us English yesterday.",
-          "choices": ["teach", "teached", "taught", "teaching"],
-          "correctIndex": 2,
-          "explanation": "teach 的過去式是不規則變化 taught。"
-        },
-        {
-          "id": "past-q8",
-          "prompt": "選出正確答案。",
-          "stem": "We ___ TV last night.",
-          "choices": ["watch", "watched", "watches", "watching"],
-          "correctIndex": 1,
-          "explanation": "watch 是規則動詞，過去式是 watched。"
-        }
+      "description": "每次會先隨機選一份題庫，再從該題庫亂數出題。",
+      "questionFiles": [
+        "questions/past-tense-core.json",
+        "questions/past-tense-irregular.json"
       ]
     }
   ]

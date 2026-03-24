@@ -14,6 +14,14 @@ function normalizeStudyBlock(block, index) {
   };
 }
 
+function normalizeQuestionSet(questionSet, index) {
+  return {
+    id: questionSet.id || `question-set-${index + 1}`,
+    title: questionSet.title || '',
+    questions: Array.isArray(questionSet.questions) ? questionSet.questions : [],
+  };
+}
+
 function normalizeStage(stage, index) {
   const kind = stage.kind || 'study';
 
@@ -30,13 +38,28 @@ function normalizeStage(stage, index) {
   }
 
   if (kind === 'quiz') {
+    const inlineQuestions = Array.isArray(stage.questions) ? stage.questions : [];
+    const questionSets = Array.isArray(stage.questionSets)
+      ? stage.questionSets.map((questionSet, questionSetIndex) => normalizeQuestionSet(questionSet, questionSetIndex))
+      : [];
+
+    if (inlineQuestions.length > 0) {
+      questionSets.push({
+        id: `${stage.id || `quiz-${index + 1}`}-inline`,
+        title: stage.title || '內建題庫',
+        questions: inlineQuestions,
+      });
+    }
+
     return {
       id: stage.id || `quiz-${index + 1}`,
       kind,
       engine: stage.engine || '',
       title: stage.title || '練習',
       description: stage.description || '',
-      questions: Array.isArray(stage.questions) ? stage.questions : [],
+      questions: inlineQuestions,
+      questionFiles: Array.isArray(stage.questionFiles) ? stage.questionFiles : [],
+      questionSets,
     };
   }
 
@@ -66,7 +89,7 @@ function stageHasContent(stage, courseData) {
   }
 
   if (stage.kind === 'quiz' && stage.engine === 'grammar-choice') {
-    return stage.questions.length > 0;
+    return stage.questions.length > 0 || stage.questionSets.length > 0;
   }
 
   return false;
@@ -88,4 +111,3 @@ export function normalizeCourseDetail(courseData) {
     stages,
   };
 }
-
