@@ -16,19 +16,19 @@
 
 ### 安裝依賴
 ```bash
-npm install
+pnpm install
 ```
 
 ### 開發伺服器 (開發模式)
 啟動本機伺服器以進行開發與預覽：
 ```bash
-npm run dev
+pnpm dev
 ```
 預設會運行在 `http://localhost:5173`。
 
 ### 建置與部署 (生產模式)
 ```bash
-npm run build
+pnpm build
 ```
 將會生成一個 `dist` 資料夾，裡面包含所有已壓縮、最佳化過後的靜態檔案（HTML, CSS, JS, JSON 資料與圖片），可以直接部署至 GitHub Pages 或任何靜態資源伺服器。
 
@@ -47,7 +47,7 @@ engp/
 ├── public/
 │   └── data/
 │       ├── course-list.json     # 課程全域索引 (包含 教材 > 單元 兩層架構)
-│       └── courses/             # 依據架構存放單元 JSON 檔 (例如: everybody-up/unit1.json)
+│       └── courses/             # 依據架構存放單元 JSON 與題庫檔 (例如: grammar/questions/*.json)
 └── package.json
 ```
 
@@ -59,24 +59,58 @@ engp/
 ```json
 {
   "courseInfo": {
-    "id": "elementary-unit1",
-    "title": "水果 Fruits",
+    "id": "grammar-past-tense",
+    "title": "Past Tense",
     "level": "elementary",
     "unit": 1,
     "version": "1.0"
   },
-  "vocabulary": [
+  "stages": [
     {
-      "id": "apple",
-      "word": "apple",
-      "phonetic": "/ˈæp.əl/",
-      "meaning": "蘋果",
-      "difficulty": 1
+      "id": "study-past-tense",
+      "kind": "study",
+      "title": "過去式學習",
+      "blocks": [
+        {
+          "type": "text",
+          "body": "go -> went"
+        }
+      ]
+    },
+    {
+      "id": "quiz-past-tense",
+      "kind": "quiz",
+      "engine": "grammar-choice",
+      "title": "現在式與過去式練習",
+      "questionFiles": [
+        "questions/past-tense-set-1.json",
+        "questions/past-tense-set-2.json",
+        "questions/past-tense-set-3.json",
+        "questions/past-tense-set-4.json",
+        "questions/past-tense-set-5.json"
+      ]
     }
-    // ...更多單字
   ],
-  "sentences": [], // 擴充中
-  "grammar": []    // 擴充中
+  "vocabulary": []
+}
+```
+
+`grammar-choice` 的題目可以直接寫在 stage 的 `questions`，也可以拆成多個 `questionFiles`。當設定多個 `questionFiles` 時，系統會在每次開始練習時先隨機選一個題庫檔，再從該檔案內打亂出題。像過去式題庫可以拆成 5 份混合題庫，每份同時包含現在式與過去式題目。
+
+```json
+{
+  "id": "past-tense-set-1",
+  "title": "Past Tense Set 1",
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "選出正確答案。",
+      "stem": "Tom ___ his room every day.",
+      "choices": ["clean", "cleans", "cleaned", "cleaning"],
+      "correctIndex": 1,
+      "explanation": "every day 表示平常習慣，所以要用 cleans。"
+    }
+  ]
 }
 ```
 

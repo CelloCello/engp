@@ -36,6 +36,37 @@
           </div>
         </section>
 
+        <!-- 單元階段選擇頁面 -->
+        <section id="screen-stages" class="screen hidden">
+          <div class="units-header">
+            <div>
+              <h2 id="stages-course-title">單元標題</h2>
+              <p id="stages-course-subtitle" class="screen-subtitle">選擇這個單元要進行的階段</p>
+            </div>
+            <button id="btn-back-units-from-stages" class="btn btn-secondary btn-sm">返回單元列表</button>
+          </div>
+          <div id="stage-list-container" class="card-grid">
+            <!-- 階段卡片由 JS 動態產生 -->
+          </div>
+        </section>
+
+        <!-- 學習頁面 -->
+        <section id="screen-study" class="screen hidden">
+          <div class="units-header">
+            <div>
+              <h2 id="study-stage-title">學習階段</h2>
+              <p id="study-stage-description" class="screen-subtitle"></p>
+            </div>
+            <button id="btn-back-to-stages" class="btn btn-secondary btn-sm">返回階段選單</button>
+          </div>
+          <div id="study-content-container" class="study-layout">
+            <!-- 學習內容由 JS 動態產生 -->
+          </div>
+          <div class="study-actions">
+            <button id="btn-study-next-stage" class="btn btn-primary hidden">前往練習</button>
+          </div>
+        </section>
+
         <!-- 測驗頁面 -->
         <section id="screen-quiz" class="screen hidden">
           <div class="quiz-header">
@@ -57,6 +88,7 @@
         <!-- 測驗結果頁面 -->
         <section id="screen-result" class="screen hidden">
           <h2>🎉 挑戰完成！ 🎉</h2>
+          <p id="result-stage-title" class="screen-subtitle"></p>
           <div class="result-stats card">
             <p>答題時間：<span id="result-time">0</span> 秒</p>
             <p>正確率：<span id="result-accuracy">0</span>%</p>
@@ -64,7 +96,7 @@
           </div>
           <div class="result-actions">
             <button id="btn-retry" class="btn btn-primary">再挑戰一次</button>
-            <button id="btn-home-from-result" class="btn btn-secondary">回單元列表</button>
+            <button id="btn-home-from-result" class="btn btn-secondary">回單元階段</button>
           </div>
         </section>
       </main>
