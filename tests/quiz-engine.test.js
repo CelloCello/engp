@@ -102,6 +102,143 @@ describe('QuizEngine', () => {
     expect(engine.correctCount).toBe(1);
   });
 
+  it('collects wrong grammar answers for result review', () => {
+    const progressTracker = {
+      getWordLevel: vi.fn(() => 1),
+      recordWordResult: vi.fn(),
+      recordGrammarChoiceResult: vi.fn(),
+    };
+    const engine = new QuizEngine(
+      {
+        courseInfo: { id: 'past-tense-unit' },
+        vocabulary: [],
+      },
+      {
+        id: 'quiz-past-tense',
+        kind: 'quiz',
+        engine: 'grammar-choice',
+        questions: [],
+      },
+      progressTracker,
+    );
+
+    engine.questions = [
+      {
+        id: 'q1',
+        progressId: 'set-1:q1',
+        prompt: '選出正確答案。',
+        stem: 'Yesterday Amy ___ home.',
+        choices: ['go', 'went'],
+        correctIndex: 1,
+        explanation: 'yesterday 要用過去式 went。',
+      },
+      {
+        id: 'q2',
+        prompt: '選出正確答案。',
+        stem: 'They ___ soccer every day.',
+        choices: ['play', 'played'],
+        correctIndex: 0,
+        explanation: 'every day 表示習慣，所以用 play。',
+      },
+    ];
+    engine.startTime = Date.now() - 3000;
+
+    expect(engine.submitAnswer(0)).toEqual({
+      isCorrect: false,
+      expectedAnswer: 'went',
+      explanation: 'yesterday 要用過去式 went。',
+    });
+
+    engine.nextQuestion();
+    engine.submitAnswer(0);
+    engine.endTime = Date.now();
+
+    expect(engine.answerRecords).toEqual([
+      {
+        questionId: 'q1',
+        progressId: 'set-1:q1',
+        prompt: '選出正確答案。',
+        stem: 'Yesterday Amy ___ home.',
+        userAnswer: 'go',
+        expectedAnswer: 'went',
+        explanation: 'yesterday 要用過去式 went。',
+        isCorrect: false,
+      },
+      {
+        questionId: 'q2',
+        progressId: 'q2',
+        prompt: '選出正確答案。',
+        stem: 'They ___ soccer every day.',
+        userAnswer: 'play',
+        expectedAnswer: 'play',
+        explanation: 'every day 表示習慣，所以用 play。',
+        isCorrect: true,
+      },
+    ]);
+    expect(engine.getStats().wrongQuestions).toEqual([
+      {
+        questionId: 'q1',
+        progressId: 'set-1:q1',
+        prompt: '選出正確答案。',
+        stem: 'Yesterday Amy ___ home.',
+        userAnswer: 'go',
+        expectedAnswer: 'went',
+        explanation: 'yesterday 要用過去式 went。',
+        isCorrect: false,
+      },
+    ]);
+  });
+
+  it('clears prior answer records when starting a new quiz run', () => {
+    const progressTracker = {
+      getWordLevel: vi.fn(() => 1),
+      recordWordResult: vi.fn(),
+      recordGrammarChoiceResult: vi.fn(),
+    };
+    const engine = new QuizEngine(
+      {
+        courseInfo: { id: 'past-tense-unit' },
+        vocabulary: [],
+      },
+      {
+        id: 'quiz-past-tense',
+        kind: 'quiz',
+        engine: 'grammar-choice',
+        questions: [
+          {
+            id: 'q1',
+            prompt: '選出正確答案。',
+            stem: 'Yesterday Amy ___ home.',
+            choices: ['go', 'went'],
+            correctIndex: 1,
+            explanation: 'yesterday 要用過去式 went。',
+          },
+        ],
+      },
+      progressTracker,
+    );
+
+    engine.questions = [
+      {
+        id: 'q1',
+        prompt: '選出正確答案。',
+        stem: 'Yesterday Amy ___ home.',
+        choices: ['go', 'went'],
+        correctIndex: 1,
+        explanation: 'yesterday 要用過去式 went。',
+      },
+    ];
+    engine.submitAnswer(0);
+
+    expect(engine.answerRecords).toHaveLength(1);
+
+    engine.start();
+
+    expect(engine.answerRecords).toEqual([]);
+    expect(engine.endTime).toBe(0);
+    expect(engine.correctCount).toBe(0);
+  });
+
   it('selects one external question set per run and records progressId', () => {
     const progressTracker = {
       getWordLevel: vi.fn(() => 1),

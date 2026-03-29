@@ -12,6 +12,7 @@ export class QuizEngine {
     this.correctCount = 0;
     this.startTime = 0;
     this.endTime = 0;
+    this.answerRecords = [];
     this.synth = window.speechSynthesis;
   }
 
@@ -20,6 +21,8 @@ export class QuizEngine {
     this.buildQuestions();
     this.currentIndex = 0;
     this.correctCount = 0;
+    this.endTime = 0;
+    this.answerRecords = [];
   }
 
   buildQuestions() {
@@ -105,6 +108,8 @@ export class QuizEngine {
       const selectedIndex = Number(inputWord);
       const isCorrect = selectedIndex === currentQ.correctIndex;
       const progressQuestionId = currentQ.progressId || currentQ.id;
+      const userAnswer = currentQ.choices?.[selectedIndex] || '';
+      const expectedAnswer = currentQ.choices?.[currentQ.correctIndex] || '';
 
       this.progressTracker.recordGrammarChoiceResult(this.courseData.courseInfo.id, progressQuestionId, isCorrect);
 
@@ -112,9 +117,20 @@ export class QuizEngine {
         this.correctCount++;
       }
 
+      this.answerRecords.push({
+        questionId: currentQ.id,
+        progressId: progressQuestionId,
+        prompt: currentQ.prompt || '',
+        stem: currentQ.stem || '',
+        userAnswer,
+        expectedAnswer,
+        explanation: currentQ.explanation || '',
+        isCorrect,
+      });
+
       return {
         isCorrect,
-        expectedAnswer: currentQ.choices[currentQ.correctIndex],
+        expectedAnswer,
         explanation: currentQ.explanation || '',
       };
     }
@@ -154,7 +170,8 @@ export class QuizEngine {
       timeSec,
       accuracy,
       correctCount: this.correctCount,
-      totalCount: this.questions.length
+      totalCount: this.questions.length,
+      wrongQuestions: this.answerRecords.filter((record) => !record.isCorrect),
     };
   }
 

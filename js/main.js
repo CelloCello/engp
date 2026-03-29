@@ -509,12 +509,42 @@ const app = {
   showResultSummary() {
     this.showScreen('result');
     const stats = this.quizEngine.getStats();
+    const wrongReviewSection = document.getElementById('result-wrong-review');
+    const perfectMessage = document.getElementById('result-perfect-message');
+    const wrongList = document.getElementById('result-wrong-list');
 
     document.getElementById('result-stage-title').textContent = `${this.currentCourse.courseInfo.title}・${this.currentStage.title}`;
     document.getElementById('result-time').textContent = stats.timeSec;
     document.getElementById('result-accuracy').textContent = stats.accuracy;
     document.getElementById('result-correct').textContent = stats.correctCount;
     document.getElementById('result-total').textContent = stats.totalCount;
+
+    if (this.currentStage?.engine !== 'grammar-choice') {
+      wrongReviewSection.classList.add('hidden');
+      perfectMessage.classList.add('hidden');
+      wrongList.innerHTML = '';
+      return;
+    }
+
+    wrongReviewSection.classList.remove('hidden');
+
+    if (stats.wrongQuestions.length === 0) {
+      perfectMessage.classList.remove('hidden');
+      wrongList.innerHTML = '';
+      return;
+    }
+
+    perfectMessage.classList.add('hidden');
+    wrongList.innerHTML = stats.wrongQuestions.map((item, index) => `
+      <article class="card result-wrong-card">
+        <div class="result-wrong-index">第 ${index + 1} 題</div>
+        ${item.prompt ? `<p class="result-wrong-prompt">${this.escapeHtml(item.prompt)}</p>` : ''}
+        <p class="result-wrong-stem">${this.escapeHtml(item.stem)}</p>
+        <p><strong>你的答案：</strong>${this.escapeHtml(item.userAnswer)}</p>
+        <p><strong>正確答案：</strong>${this.escapeHtml(item.expectedAnswer)}</p>
+        ${item.explanation ? `<p><strong>解釋：</strong>${this.escapeHtml(item.explanation)}</p>` : ''}
+      </article>
+    `).join('');
   },
 
   escapeHtml(value) {
